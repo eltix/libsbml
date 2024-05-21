@@ -125,10 +125,12 @@ AssignmentCycles::check_ (const Model& m, const Model& object)
   // check for self assignment
   checkForSelfAssignment(m);
 
+  // Temporarily disable cyclic dependency checks until https://github.com/sbmlteam/libsbml/issues/374 is solved
+  /* 
   determineAllDependencies();
   determineCycles(m);
-
   checkForImplicitCompartmentReference(m);
+  */
 }
  
 void 
